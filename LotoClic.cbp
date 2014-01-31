@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LotoClic" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LotoClic" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/lib/libttspico.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/LotoClic" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="/usr/lib/libttspico.so" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="LotoClicApp.cpp" />
+		<Unit filename="LotoClicApp.h" />
+		<Unit filename="LotoClicMain.cpp" />
+		<Unit filename="LotoClicMain.h" />
+		<Unit filename="UserConfig.cpp" />
+		<Unit filename="UserConfig.h" />
+		<Unit filename="numberPopup.cpp" />
+		<Unit filename="numberPopup.h" />
+		<Unit filename="wxsmith/LotoClicframe.wxs" />
+		<Unit filename="wxsmith/UserConfig.wxs" />
+		<Unit filename="wxsmith/numberPopup.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="LotoClicApp.cpp" main="LotoClicFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/LotoClicframe.wxs" src="LotoClicMain.cpp" hdr="LotoClicMain.h" fwddecl="0" i18n="1" name="LotoClicFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/numberPopup.wxs" src="numberPopup.cpp" hdr="numberPopup.h" fwddecl="0" i18n="1" name="numberPopup" language="CPP" />
+					<wxFrame wxs="wxsmith/UserConfig.wxs" src="UserConfig.cpp" hdr="UserConfig.h" fwddecl="0" i18n="1" name="UserConfig" language="CPP" />
+				</resources>
+			</wxsmith>
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
